@@ -4,6 +4,12 @@ CLIP-based Unsupervised 3D Segmentation via Object-level Denoise and Knowledge D
 
 ## PipeLine
 ![image](https://github.com/CRISPdataset/CUS3D/blob/main/pic/pipeline.png)
+The overall framework of our proposed method is illustrated in Figure, which consists of four main stages:
+1) 2D CLIP feature extraction (orange),
+2) 3D feature aggregation (blue),
+3) 3D student network (green),
+4) CLIP textual encoder (gray).
+The first and the second stage belongs to the Object-level Denoising Projection (ODP) module, while the third and forth stage belongs to the 3D Multimodal Distillation Learning (MDL) module.
 
 
 ## Results
