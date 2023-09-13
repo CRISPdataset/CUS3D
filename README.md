@@ -3,10 +3,11 @@ CLIP-based Unsupervised 3D Segmentation via Object-level Denoise and Knowledge D
 
 
 ## PipeLine
-![image](https://github.com/CRISPdataset/CRISP/blob/main/pic/examples.png)
+![image](https://github.com/CRISPdataset/CUS3D/blob/main/pic/pipeline.png)
+
 
 ## Results
-![image](https://github.com/CRISPdataset/CRISP/blob/main/pic/examples.png)
+![image](https://github.com/CRISPdataset/CUS3D/blob/main/pic/results.png)
 
 ## Code
 The code is published at github.
