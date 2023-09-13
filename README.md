@@ -9,6 +9,7 @@ The overall framework of our proposed method is illustrated in Figure, which con
 2) 3D feature aggregation (blue),
 3) 3D student network (green),
 4) CLIP textual encoder (gray).
+
 The first and the second stage belongs to the Object-level Denoising Projection (ODP) module, while the third and forth stage belongs to the 3D Multimodal Distillation Learning (MDL) module.
 
 
