@@ -1,0 +1,65 @@
+model:
+  channels: 32
+  num_blocks: 7
+  semantic_classes: 20
+  ignore_label: -100
+  train_cfg:
+    max_proposal_num: 200
+    pos_iou_thr: 0.5
+    x4_split: False
+  test_cfg:
+    cls_score_thr: 0.001
+    mask_score_thr: -0.5
+    min_npoint: 100
+    x4_split: False
+  fixed_modules: ['input_conv', 'unet'] #todo
+
+data:
+  train:
+    type: 'scannetv2'
+    data_root: 'dataset/scannetv2'
+    prefix: 'train'
+    suffix: '_inst_nostuff_5w.pth'
+    # suffix: '_inst_nostuff.pth'
+    training: True
+    repeat: 4
+    voxel_cfg:
+      scale: 50
+      spatial_shape: [128, 512]
+      max_npoint: 250000
+      min_npoint: 5000
+  test:
+    type: 'scannetv2'
+    data_root: 'dataset/scannetv2'
+    prefix: ['val', 'train']
+    suffix: '_inst_nostuff_5w.pth'
+    # suffix: '_inst_nostuff.pth'
+    training: False
+    with_label: True
+    voxel_cfg:
+      scale: 50
+      spatial_shape: [128, 512]
+      max_npoint: 250000
+      min_npoint: 5000
+    scene_ids: ['scene0197_01']
+
+dataloader:
+  train:
+    batch_size: 4
+    num_workers: 4
+  test:
+    batch_size: 1
+    num_workers: 4
+
+optimizer:
+  type: 'Adam'
+  lr: 0.01
+
+fp16: False
+epochs: 20
+step_epoch: 10 #8
+save_freq: 1
+# pretrain: './hais_ckpt_spconv2.pth'
+pretrain: 'pth/softgroup_scannet_spconv2.pth'
+#pretrain: '/home/wxj/code/P2P/ov-seg/SoftGroup/pre-train/base.pth'
+work_dir: ''

@@ -1,0 +1,67 @@
+model:
+  channels: 32
+  num_blocks: 7
+  semantic_classes: 20
+  ignore_label: -100
+  train_cfg:
+    max_proposal_num: 200
+    pos_iou_thr: 0.5
+  test_cfg:
+    cls_score_thr: 0.001
+    mask_score_thr: -0.5
+    min_npoint: 100
+    eval_tasks: ['semantic']
+
+  fixed_modules: ['input_conv', 'unet']
+
+
+data:
+  train:
+    type: 'scannetv2'
+    data_root: 'dataset/scannetv2'
+    prefix: 'train'
+    suffix: '_inst_nostuff_5w.pth'
+    # suffix: '_inst_nostuff.pth'
+    training: True
+    repeat: 4
+    voxel_cfg:
+      scale: 50
+      spatial_shape: [128, 512]
+      max_npoint: 250000
+      min_npoint: 5000
+  test:
+    type: 'scannetv2'
+    data_root: 'dataset/scannetv2'
+    prefix: 'val'
+    suffix: '_inst_nostuff_5w.pth'
+    # suffix: '_inst_nostuff.pth'
+    training: False
+    with_label: True
+    voxel_cfg:
+      scale: 50
+      spatial_shape: [128, 512]
+      max_npoint: 250000
+      min_npoint: 5000
+
+dataloader:
+  train:
+    batch_size: 1
+    num_workers: 0
+  test:
+    batch_size: 1
+    num_workers: 4
+
+optimizer:
+  type: 'Adam'
+  lr: 0.008
+
+fp16: True
+epochs: 20
+step_epoch: 4 #8
+save_freq: 1
+# pretrain: './hais_ckpt_spconv2.pth'
+# pretrain: 'pth/softgroup_scannet_spconv2.pth'
+#pretrain: '/home/wxj/code/P2P/ov-seg/SoftGroup/pre-train/base.pth'
+pretrain: '/home/wxj/code/P2P/ov-seg/SoftGroup/work_dirs/resume0.001-base(hl-re-0.0005)-40epoch/epoch_15.pth'
+# pretrain: '/home/wxj/code/P2P/ov-seg/SoftGroup/work_dirs/unseen_i2_cls_0.005-based0.01/epoch_2.pth' # 训练了9个epoch for unseen 2
+work_dir: ''
