@@ -1,0 +1,15 @@
+# ninja log v5
+0	18982	1682683563283852204	/home/wxj/code/P2P/3D-SPS-main/lib/pointnet2/build/temp.linux-x86_64-cpython-38/_ext_src/src/ball_query.o	17293a4d36e844ae
+2	18985	1682683563283852204	/home/wxj/code/P2P/3D-SPS-main/lib/pointnet2/build/temp.linux-x86_64-cpython-38/_ext_src/src/group_points.o	455a6c1a6e8a5753
+3	19636	1682683563935850706	/home/wxj/code/P2P/3D-SPS-main/lib/pointnet2/build/temp.linux-x86_64-cpython-38/_ext_src/src/interpolate.o	2a49c625b395e77
+4	20227	1682683564527849346	/home/wxj/code/P2P/3D-SPS-main/lib/pointnet2/build/temp.linux-x86_64-cpython-38/_ext_src/src/sampling.o	24e3bf0605cb9715
+1	24234	1682683568527840168	/home/wxj/code/P2P/3D-SPS-main/lib/pointnet2/build/temp.linux-x86_64-cpython-38/_ext_src/src/bindings.o	f03b056268f4cae8
+6	17209	1682684055486785604	/home/wxj/code/P2P/3D-SPS-main/lib/pointnet2/build/temp.linux-x86_64-cpython-38/_ext_src/src/interpolate.o	197b1d17580f1d33
+4	17318	1682684055594785380	/home/wxj/code/P2P/3D-SPS-main/lib/pointnet2/build/temp.linux-x86_64-cpython-38/_ext_src/src/ball_query.o	28462eafaa879320
+7	17375	1682684055650785264	/home/wxj/code/P2P/3D-SPS-main/lib/pointnet2/build/temp.linux-x86_64-cpython-38/_ext_src/src/sampling.o	34893442b3b17d68
+5	17408	1682684055686785189	/home/wxj/code/P2P/3D-SPS-main/lib/pointnet2/build/temp.linux-x86_64-cpython-38/_ext_src/src/group_points.o	2748c1d02aea613b
+5	23103	1682684061370773415	/home/wxj/code/P2P/3D-SPS-main/lib/pointnet2/build/temp.linux-x86_64-cpython-38/_ext_src/src/bindings.o	5277d5114737436e
+4	36129	1682684074330746600	/home/wxj/code/P2P/3D-SPS-main/lib/pointnet2/build/temp.linux-x86_64-cpython-38/_ext_src/src/ball_query_gpu.o	f99ec0bb89b8f3b6
+6	36132	1682684074334746592	/home/wxj/code/P2P/3D-SPS-main/lib/pointnet2/build/temp.linux-x86_64-cpython-38/_ext_src/src/group_points_gpu.o	497a7f9855ca513b
+7	36133	1682684074330746600	/home/wxj/code/P2P/3D-SPS-main/lib/pointnet2/build/temp.linux-x86_64-cpython-38/_ext_src/src/interpolate_gpu.o	caaba70a32ca04ca
+8	37013	1682684075282744632	/home/wxj/code/P2P/3D-SPS-main/lib/pointnet2/build/temp.linux-x86_64-cpython-38/_ext_src/src/sampling_gpu.o	10e079d033f3b8f8
